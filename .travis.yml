@@ -14,6 +14,11 @@ install:
   - go get -u gopkg.in/alecthomas/gometalinter.v2
 
 script:
+  # Execute some external linters
+  - go vet 2> govet-report.out
+  - golint > golint-report.out
+  - gometalinter > gometalinter-report.out
+  # And then execute SonarCloud analysis which will run its own code analysis, and also reuse the linters' results
   - sonar-scanner
 
 cache:

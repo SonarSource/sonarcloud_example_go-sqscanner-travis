@@ -7,14 +7,14 @@ addons:
   sonarcloud:
     organization: "sonarcloud"
     token:
-      secure: ""
+      secure: "NsV4wkCqio4gwtrNZaWVnNKYpndn2HzCkROlYG97NoQHBRKAUx4W7WzfnrtltGbBZKq53I4Zk+6aVZyXIv/HMWA6MgI5UMdnDOB2pgaz/Mbry+E1iYvtwYjIFlOB942XE9AOHpnXcJ3TlKOVc9CMwXOVmcVC6vj950TRa5yLuMI0xiKWW/e/iSIJcDXnXmciKFoPD9fDIQLzTJw7NZsgflQ9hggz/HrjVQUFZnz4Dmm45YLNgDt0bI1ulK2Q23ql3mvA4sbn0JmQNzmxBLCyz9MFClj+i9XfSXNJFMwdiDb+7e51MrLnwCxQsd1iJqVC/z2hzsHmWpfK6L+S10l78d6B2DJ2k9VciBfNa8YOU0rD7rKz+0/YaNB0zkNJRPOzuFR2/txpquRXrJOJTi5s63CMF1bePPBJjUX085cgcVj6SrZ7s+UlpKk8W5xEUivZcmINMee6cveLWs81CRf+Kntb97xlDdiDJI9amamUQgH/JBAUlu3Ta3jXByGMzO0sdjAwtp95q/68Z8a3JgwGesBfVZPt3YYhHgEeUZlppKNWWxX6p+/7nXUaLh1Oc3o++5sWQ1RrdZqEseRUrkxfIQxOekWd2nvpQMcmKEbmvLiE8Eaj3M95WUceucK4NJC3aq3DhIIjMswd6rTXF3qlcjjBkMLYc4+2+p63O7RK8FA="
       
 install:
   - go get -u golang.org/x/lint/golint
   - go get -u gopkg.in/alecthomas/gometalinter.v2
 
 script:
-  - java -version
+  - sonar-scanner
 
 cache:
   directories:

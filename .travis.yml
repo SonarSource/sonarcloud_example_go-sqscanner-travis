@@ -12,10 +12,11 @@ addons:
 install:
   # Installs Go Meta Linter (Golint and Go vet are also supported independently)
   - go get -u gopkg.in/alecthomas/gometalinter.v2
+  - $GOPATH/bin/gometalinter.v2 --install
 
 script:
   # Execute Go Meta Linter
-  - ~/go/bin/gometalinter.v2 > gometalinter-report.out
+  - $GOPATH/bin/gometalinter.v2 > gometalinter-report.out
   # And then execute SonarCloud analysis which will run its own code analysis, and also reuse the linters' results
   - sonar-scanner
 

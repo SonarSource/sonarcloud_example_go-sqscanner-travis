@@ -1,5 +1,5 @@
 // S1135
-package samples
+package sonarcloud_go_qscanner_travis
 
 func todo() {
   // Noncompliant@+1

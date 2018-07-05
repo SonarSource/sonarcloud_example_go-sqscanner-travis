@@ -1,5 +1,5 @@
 // S105
-package samples
+package sonarcloud_go_qscanner_travis
 
 func three() int {
   x := 3

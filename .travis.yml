@@ -17,8 +17,9 @@ install:
 script:
   # Execute Go Meta Linter
   - $GOPATH/bin/gometalinter.v2 samples/ > gometalinter-report.out || true
-  # Execute tests
-  - go test -json | sed 's|github.com/SonarSource/sonarcloud_example_go-sqscanner-travis|samples|g' > report.json
+  # Execute tests and coverage
+  - go test -json > report.json
+  - go test -coverprofile=coverage.out
   # And then execute SonarCloud analysis which will run its own code analysis, and also reuse the linters' results
   - sonar-scanner
 

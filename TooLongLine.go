@@ -1,5 +1,5 @@
 // S103
-package samples
+package sonarcloud_go_qscanner_travis
 
 func longLine() int {
   x := 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
